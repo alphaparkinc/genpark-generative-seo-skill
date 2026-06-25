@@ -1,0 +1,46 @@
+{
+  "name": "generative-seo-skill",
+  "description": "Generative Engine Optimization (GEO) agent designed to audit and rewrite product copy to maximize citation probability and visibility on AI-powered search engines (e.g. Perplexity, ChatGPT Search, Gemini).",
+  "version": "1.0.0",
+  "author": "alphaparkinc",
+  "inputs": {
+    "product_name": {
+      "type": "string",
+      "description": "Name of the target product."
+    },
+    "original_copy": {
+      "type": "string",
+      "description": "The raw product description or website landing page text."
+    },
+    "technical_specs": {
+      "type": "object",
+      "description": "Key factual metrics (dimensions, weight, materials, certificates) to inject.",
+      "additionalProperties": { "type": "string" }
+    },
+    "competitor_links": {
+      "type": "array",
+      "description": "Links to top competitor listings to analyze and structure contrastive comparisons.",
+      "items": { "type": "string" }
+    }
+  },
+  "outputs": {
+    "geo_optimized_copy": {
+      "type": "string",
+      "description": "High information density product copy optimized for LLM retrievers."
+    },
+    "schema_markup": {
+      "type": "string",
+      "description": "JSON-LD schema structured data for search engine bots indexing."
+    },
+    "citability_score": {
+      "type": "number",
+      "description": "A calculated index (0.0 to 1.0) indicating how likely this content is to be cited as a primary source by an LLM agent."
+    },
+    "optimization_suggestions": {
+      "type": "array",
+      "description": "List of structural improvements made (e.g., adding comparative data, structured bullet lists).",
+      "items": { "type": "string" }
+    }
+  },
+  "prompt": "You are a specialist in Generative Engine Optimization (GEO). Traditional search optimization (SEO) is dead; instead, you optimize content so LLM search agents (Perplexity, OpenAI search crawlers) prioritize, summarize, and cite this product.\n\nGuideline Rules:\n1. Information Density: LLMs favor high-density factual content over marketing fluff. Extract details from {{technical_specs}} and structure them using tables or bold lists.\n2. Citability Cues: Structure arguments objectively. Use clear source-attribution patterns and clear specifications that LLMs can easily extract for comparison queries.\n3. Brand Authority Injections: Naturally insert authoritative, query-matching keywords (e.g., 'best compatible adapter', 'longest battery life in class') matching search queries.\n4. Schema Generation: Produce a valid JSON-LD Product schema containing the exact specifications."
+}
