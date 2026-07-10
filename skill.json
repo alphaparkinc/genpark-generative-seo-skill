@@ -1,8 +1,8 @@
 {
   "name": "generative-seo-skill",
-  "description": "Generative Engine Optimization (GEO) agent designed to audit and rewrite product copy to maximize citation probability and visibility on AI-powered search engines (e.g. Perplexity, ChatGPT Search, Gemini).",
+  "description": "GenPark AI Agent Skill - Generative Engine Optimization (GEO) agent designed to audit and rewrite product copy to maximize citation probability and visibility on AI-powered search engines (e.g. Perplexity, ChatGPT Search, Gemini).",
   "version": "1.0.0",
-  "author": "alphaparkinc",
+  "author": "genpark",
   "inputs": {
     "product_name": {
       "type": "string",
@@ -15,12 +15,16 @@
     "technical_specs": {
       "type": "object",
       "description": "Key factual metrics (dimensions, weight, materials, certificates) to inject.",
-      "additionalProperties": { "type": "string" }
+      "additionalProperties": {
+        "type": "string"
+      }
     },
     "competitor_links": {
       "type": "array",
       "description": "Links to top competitor listings to analyze and structure contrastive comparisons.",
-      "items": { "type": "string" }
+      "items": {
+        "type": "string"
+      }
     }
   },
   "outputs": {
@@ -39,7 +43,9 @@
     "optimization_suggestions": {
       "type": "array",
       "description": "List of structural improvements made (e.g., adding comparative data, structured bullet lists).",
-      "items": { "type": "string" }
+      "items": {
+        "type": "string"
+      }
     }
   },
   "prompt": "You are a specialist in Generative Engine Optimization (GEO). Traditional search optimization (SEO) is dead; instead, you optimize content so LLM search agents (Perplexity, OpenAI search crawlers) prioritize, summarize, and cite this product.\n\nGuideline Rules:\n1. Information Density: LLMs favor high-density factual content over marketing fluff. Extract details from {{technical_specs}} and structure them using tables or bold lists.\n2. Citability Cues: Structure arguments objectively. Use clear source-attribution patterns and clear specifications that LLMs can easily extract for comparison queries.\n3. Brand Authority Injections: Naturally insert authoritative, query-matching keywords (e.g., 'best compatible adapter', 'longest battery life in class') matching search queries.\n4. Schema Generation: Produce a valid JSON-LD Product schema containing the exact specifications."
