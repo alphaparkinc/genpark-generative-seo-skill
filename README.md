@@ -1,4 +1,4 @@
-# generative-seo-skill
+# genpark-generative-seo-skill
 
 > **GenPark AI Agent Skill** -- # Generative Engine SEO (GEO) Optimizer Skill
 
