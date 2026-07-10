@@ -1,4 +1,6 @@
-# Generative Engine SEO (GEO) Optimizer Skill
+# generative-seo-skill
+
+> **GenPark AI Agent Skill** -- # Generative Engine SEO (GEO) Optimizer Skill
 
 This repository contains the **Generative Engine SEO (GEO) Optimizer Skill** — a modular developer Python client SDK, agent skill interface configuration (`skill.json`), and executable workflow tests. It is designed to restructure e-commerce catalog information to maximize recommendation and citation probability on AI-driven search platforms (e.g., Perplexity AI, ChatGPT Search, Gemini).
 
